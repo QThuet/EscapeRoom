@@ -11,6 +11,6 @@ public class teleport : MonoBehaviour
 
     }
     public void teleportPlayer() {
-        Player.transform.position = new Vector3(-27.0f,-7.0f,-4.5f);
+        Player.transform.position = new Vector3(14f,-6f,-22f);
     }
 }
