@@ -7,7 +7,9 @@ public class NumPad : MonoBehaviour
 {
     [Header("input in inspector")]
     public Text output;
-    private string password = "2490";
+    public GameObject door1;
+    public GameObject door2;
+    private string password = "7014";
     public string input = "";
 
     public void inputNum(string num)
@@ -31,6 +33,8 @@ public class NumPad : MonoBehaviour
         if(input.Equals(password))
         {
             print("win");
+            door1.SetActive(false);
+            door2.SetActive(false);
             //win condition
         }
         else
