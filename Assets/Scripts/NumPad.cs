@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class NumPad : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class NumPad : MonoBehaviour
     public GameObject door2;
     private string password = "7014";
     public string input = "";
+    public GameObject key;
 
     public void inputNum(string num)
     {
@@ -36,6 +38,7 @@ public class NumPad : MonoBehaviour
             door1.SetActive(false);
             door2.SetActive(false);
             //win condition
+            key.AddComponent<XRGrabInteractable>();
         }
         else
         {
